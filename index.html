@@ -895,7 +895,7 @@
   .note.two .g-rows dt, .note.two .g-head, .note.two .g-not li { color: #D9D3AE; }
   .note.two .g-rule, .note.two .g-plan .g-t { border-top-color: rgba(243,234,211,0.5); }
 </style>
-<script>(function(){var v="20261009064241";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009064529";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1246,7 +1246,7 @@
             <label class="app-check"><input type="checkbox" name="Passport valid to Sept 2027" value="Yes" required> <span>My passport is valid until at least September 2027.</span></label>
           </fieldset>
 
-          <button type="submit" class="button app-send">Send application</button>
+          <button type="submit" class="button app-send">Submit application</button>
           <p class="app-msg" id="app-msg" role="status"></p>
         </form>
         <div class="app-done" id="app-done" hidden>
@@ -1382,7 +1382,7 @@
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
-    btn.disabled = true; btn.textContent = 'Sending…'; msg.textContent = '';
+    btn.disabled = true; btn.textContent = 'Submitting…'; msg.textContent = '';
     fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
       .then(function (r) { return r.json(); })
       .then(function (j) {
@@ -1390,7 +1390,7 @@
         else { throw new Error('not sent'); }
       })
       .catch(function () {
-        btn.disabled = false; btn.textContent = 'Send application';
+        btn.disabled = false; btn.textContent = 'Submit application';
         msg.textContent = "Sorry, that didn't send. Please try again, or message @unwakingart on Instagram.";
       });
   });
