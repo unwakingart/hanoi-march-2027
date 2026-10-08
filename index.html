@@ -821,7 +821,8 @@
   .cb-clip::before { content: ""; position: absolute; left: 50%; top: 8px; width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: #FDF8F0; box-shadow: inset 0 1px 2px rgba(0,0,0,0.35); }
   .cb-clip::after { content: ""; position: absolute; left: -14px; right: -14px; bottom: -6px; height: 12px; border-radius: 3px; background: linear-gradient(#DADAD7, #8F8F8C); box-shadow: 0 2px 3px rgba(0,0,0,0.3); }
   .cb .glance.app { position: relative; background: #FFFDF7; border: 0; border-radius: 3px; padding: 36px 20px 24px; }
-  .app-head { display: inline-block; font-size: 22px; line-height: 1.2; color: #4A3728; margin: 0 0 20px; background: linear-gradient(transparent 58%, rgba(201,184,230,0.7) 58%); padding: 0 4px; }
+  .app-head { font-size: 22px; line-height: 1.3; color: #4A3728; margin: 46px 0 20px; }
+  .app-head span { background: linear-gradient(transparent 58%, rgba(201,184,230,0.7) 58%); padding: 0 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
   .app-sticky { position: absolute; right: 14px; top: 22px; background: #F7ECB8; border: 1px solid #4A3728; padding: 6px 10px 7px; font-size: 9px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #6B5744; transform: rotate(3deg); box-shadow: 0 3px 7px rgba(60,40,20,0.2); text-align: center; }
   .app-sticky b { display: block; font-size: 13px; letter-spacing: 0; text-transform: none; color: #2C2418; font-weight: 600; }
   .app input[type="text"], .app input[type="email"], .app input[type="number"], .app input[type="tel"] { display: block; width: 100%; margin-top: 5px; font: inherit; font-weight: 400; font-size: 15px; color: #2C2418; background: transparent; border: 0; border-bottom: 1.5px solid #4A3728; border-radius: 0; padding: 5px 2px 4px; }
@@ -831,7 +832,7 @@
   .app .app-pick:has(input:checked) { background: #C9B8E6; }
   .app .app-send { background: #C9B8E6; color: #2E2140; border: 1px solid #4A3728; box-shadow: 3px 3px 0 #4A3728; }
   .app .app-send:hover { background: #DDD0F2; }
-  @media (min-width: 700px) { .cb { padding: 44px 18px 18px; } .cb .glance.app { padding: 44px 44px 32px; } .app-sticky { right: 30px; top: 30px; } }
+  @media (min-width: 700px) { .cb { padding: 44px 18px 18px; } .cb .glance.app { padding: 44px 44px 32px; } .app-sticky { right: 30px; top: 30px; } .app-head { margin-top: 0; padding-right: 130px; } .app-head br { display: none; } }
   .app .app-agree { margin-top: 18px; padding-top: 16px; border-top: 1px dashed rgba(74,55,40,0.45); }
   .app .app-check { display: flex; gap: 9px; align-items: flex-start; font-weight: 400; font-size: 14px; color: #2C2418; margin: 0 0 9px; cursor: pointer; }
   .app .app-check input { accent-color: #4A3728; margin-top: 4px; flex: none; width: 15px; height: 15px; }
@@ -882,7 +883,7 @@
     .nb-page.r { border-top: 0; }
   }
 </style>
-<script>(function(){var v="20261009004132";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009054725";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1188,7 +1189,7 @@
       <div class="cb"><span class="cb-clip"></span>
       <div class="glance app">
         <span class="app-sticky">Apply by<b>Dec 31, 2026</b></span>
-        <p class="app-head">Application</p>
+        <p class="app-head"><span>Application for <br>All Girls Drawing Cohort</span></p>
         <form id="app-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="ea3387c8-806b-4381-becc-67fddda23698">
           <input type="hidden" name="subject" value="New application: All Girls Drawing Cohort">
