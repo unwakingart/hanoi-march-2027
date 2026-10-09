@@ -915,8 +915,12 @@
   @media (max-width: 899px) { section[id] { scroll-margin-top: 52px; } }
   @media (min-width: 900px) { .pin-nav { display: none; } }
   @media (prefers-reduced-motion: reduce) { .pin-nav { transition: none; } }
+  /* The fee for people paying from abroad, and the line that explains it */
+  .g-rows dd small.usd { display: block; font-size: 12px; line-height: 1.35; color: #6B5744; margin-top: 2px; }
+  .note.two .g-rows dd small.usd { color: #D9D3AE; }
+  .fee-intl { text-align: center; font-size: 13.5px; color: #4A3728; max-width: 560px; margin: 30px auto 0; }
 </style>
-<script>(function(){var v="20261009091658";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009092625";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1059,7 +1063,7 @@
       <div class="glance note one" id="g-one">
         <p class="note-title">[ One week · Pencil ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd>₱65,000</dd>
+          <dt>Cohort fee</dt><dd>₱65,000<small class="usd">US$1,100 if you pay from outside the Philippines</small></dd>
           <dt>Cohort dates</dt><dd>Mar 4–11, 2027</dd>
           <dt>Application deadline</dt><dd>Dec 31, 2026</dd>
         </dl>
@@ -1099,7 +1103,7 @@
       <div class="glance note two" id="g-two">
         <p class="note-title">[ Two weeks · Pencil, Charcoal and Composition ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd>₱105,000</dd>
+          <dt>Cohort fee</dt><dd>₱105,000<small class="usd">US$1,750 if you pay from outside the Philippines</small></dd>
           <dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd>
           <dt>Application deadline</dt><dd>Dec 31, 2026</dd>
         </dl>
@@ -1137,6 +1141,7 @@
         </div>
       </div>
       </div>
+      <p class="fee-intl">Fees are in Philippine pesos. If you pay from outside the Philippines, the fee is in US dollars and you pay by Wise. Your installment amounts in dollars come with your acceptance.</p>
     </div>
   </section>
 
@@ -1324,11 +1329,11 @@
         </ul>
         <h3>Do I need a visa?</h3>
         <ul class="plain">
-          <li>Philippine passport holders can enter Vietnam visa-free for up to 21 days, which covers the whole trip. If you plan to arrive early or stay on, make sure your whole stay fits within that. Rules change, so please check the current rule for your passport before you book anything.</li>
+          <li>It depends on your passport. Philippine passport holders can enter Vietnam visa-free for up to 21 days, which covers the whole trip. If you plan to arrive early or stay on, make sure your whole stay fits within that. Rules change and differ by country, so please check the current rule for your passport before you book anything.</li>
         </ul>
         <h3>What's the weather like?</h3>
         <ul class="plain">
-          <li>It's summer back home, but March in Hanoi is cool and mild, usually around 17 to 23°C. Skies are often grey, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
+          <li>It's summer in the Philippines, but March in Hanoi is cool and mild, usually around 17 to 23°C. Skies are often grey, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
         </ul>
         <h3>What should I bring?</h3>
         <ul class="plain">
