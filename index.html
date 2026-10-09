@@ -932,8 +932,20 @@
   .note.two .g-plan.both .g-h { color: #D9D3AE; }
   @media (max-width: 360px) { .g-plan.both { column-gap: 8px; font-size: 12.5px; } .g-plan.both .g-h { letter-spacing: 0.08em; } .g-plan.both .php { font-size: 11px; } }
   .fee-intl { text-align: center; font-size: 13.5px; color: #4A3728; max-width: 560px; margin: 30px auto 0; }
+  /* Partial scholarship: the box under the fee notes, and the questions the form opens for it */
+  .scholar-box { border: 1px dashed rgba(74,55,40,0.5); padding: 16px 20px 14px; margin: 26px auto 0; max-width: 620px; text-align: center; }
+  .scholar-box .g-head { margin-bottom: 8px; color: #4A3728; }
+  .scholar-box p { margin: 0 0 6px; font-size: 14.5px; }
+  .scholar-box p:last-child { margin-bottom: 0; }
+  .g-plan.sch { max-width: 560px; column-gap: 22px; font-size: 14.5px; margin-top: 6px; }
+  .g-plan.sch .g-h { white-space: nowrap; }
+  @media (max-width: 360px) { .g-plan.sch { column-gap: 10px; font-size: 12.5px; } .g-plan.sch .g-h { letter-spacing: 0.06em; } }
+  .know .g-panel.fact ul + h3 { margin-top: 20px; }
+  .scholar-qs { border-left: 2px solid #5C682E; padding: 2px 0 2px 16px; margin: 0 0 16px; }
+  .scholar-qs[hidden] { display: none; }
+  .app .scholar-note { font-size: 13.5px; font-weight: 400; color: #4A3728; margin: 0 0 14px; }
 </style>
-<script>(function(){var v="20261009095159";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009102830";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1157,6 +1169,10 @@
       </div>
       </div>
       <p class="fee-intl">Fees are in US dollars. If you pay from the Philippines, you pay the Philippine peso amounts shown beside them. From anywhere else, you pay in US dollars by Wise.</p>
+      <div class="scholar-box">
+        <p class="g-head">Partial scholarship</p>
+        <p>One partial scholarship may be awarded for each cohort, for Filipina artists who already have a portfolio. The details are under <a href="#payment" data-open-tab="ap-s">How to apply</a>.</p>
+      </div>
     </div>
   </section>
 
@@ -1164,10 +1180,11 @@
 
 <!-- 9. Dates and payment -->
   <section id="payment">
-    <div class="g-wrap know n2">
+    <div class="g-wrap know n3">
       <p class="g-title">[ How to apply ]</p>
       <div class="g-tabs" role="tablist">
         <button type="button" class="g-tab on" role="tab" aria-selected="true" data-panel="ap-0">Application process</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-s">Partial scholarship</button>
         <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-3">Cancellation policy</button>
       </div>
       <div class="glance g-panel fact" id="ap-0" role="tabpanel">
@@ -1184,7 +1201,7 @@
         <div class="num">2</div>
         <div class="what">
           <h3>Hear back within a few days</h3>
-          <p>I read every application and reply to everyone, whether it's a yes or a no.</p>
+          <p>I read every application and reply to everyone, whether it's a yes or a no. If you apply for the <a href="#payment" data-open-tab="ap-s">partial scholarship</a>, you'll hear back by January 5, 2027.</p>
         </div>
       </div>
       <div class="step">
@@ -1216,6 +1233,29 @@
         </div>
       </div>
     </div>
+      </div>
+      <div class="glance g-panel fact" id="ap-s" role="tabpanel" hidden>
+        <h3>Partial scholarship</h3>
+        <ul class="plain">
+          <li>One partial scholarship may be awarded for each cohort, for exceptional creative potential.</li>
+          <li>It is for Filipina artists who already have a portfolio.</li>
+          <li>Instead of paying the full fee, the scholar will only pay ₱45,000 for one week, or ₱75,000 for two weeks. Flights are your own, as they are for everyone.</li>
+        </ul>
+        <h3>How to apply for it</h3>
+        <ul class="plain">
+          <li>In the <a href="#apply">application form</a>, answer "Yes" to the scholarship question. It opens a few short questions and asks for a link to your portfolio.</li>
+          <li>Apply by Dec 31, 2026. You'll hear back by January 5, 2027.</li>
+          <li>If you're awarded it, you pay your downpayment within 24 hours and the rest in three installments, like everyone else.</li>
+        </ul>
+        <h3>The scholar's installment plan</h3>
+        <div class="g-plan sch">
+          <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
+          <span>Downpayment, within 24 hours of being awarded</span><span>₱15,000</span><span>₱30,000</span>
+          <span>By Jan 15, 2027</span><span>₱10,000</span><span>₱15,000</span>
+          <span>By Jan 30, 2027</span><span>₱10,000</span><span>₱15,000</span>
+          <span>By Feb 15, 2027</span><span>₱10,000</span><span>₱15,000</span>
+          <span class="g-t">Total</span><span class="g-t">₱45,000</span><span class="g-t">₱75,000</span>
+        </div>
       </div>
       <div class="glance g-panel fact" id="ap-3" role="tabpanel" hidden>
         <h3>Cancellation policy</h3>
@@ -1264,6 +1304,24 @@
             <label class="app-pick"><input type="radio" name="Program" value="One week: Pencil" required> One week: Pencil</label>
             <label class="app-pick"><input type="radio" name="Program" value="Two weeks: Pencil, Charcoal and Composition"> Two weeks: Pencil, Charcoal and Composition</label>
           </fieldset>
+
+          <fieldset>
+            <legend>Are you applying for the <a href="#payment" data-open-tab="ap-s">partial scholarship</a>? It's for Filipina artists who already have a portfolio.</legend>
+            <label class="app-pick"><input type="radio" name="Applying for the partial scholarship" value="No" required checked> No</label>
+            <label class="app-pick"><input type="radio" name="Applying for the partial scholarship" value="Yes"> Yes</label>
+          </fieldset>
+          <div class="scholar-qs" id="scholar-qs" hidden>
+            <p class="scholar-note">The partial scholarship is awarded for exceptional creative potential. Instead of paying the full fee, the scholar will only pay ₱45,000 for one week, or ₱75,000 for two weeks. You'll hear back by January 5, 2027.</p>
+            <label>Link to your portfolio, or the Instagram account where you post your art<input type="text" name="Scholarship: portfolio link" inputmode="url" disabled></label>
+            <label>Tell me about your art practice. What do you make, and for how long?<textarea name="Scholarship: art practice" rows="3" disabled></textarea></label>
+            <label>What would this cohort do for your work?<textarea name="Scholarship: what the cohort would do" rows="3" disabled></textarea></label>
+            <fieldset>
+              <legend>If you aren't awarded the scholarship, would you still join at the full fee?</legend>
+              <label class="app-pick"><input type="radio" name="Scholarship: would join at the full fee" value="Yes" disabled> Yes</label>
+              <label class="app-pick"><input type="radio" name="Scholarship: would join at the full fee" value="No" disabled> No</label>
+            </fieldset>
+            <label class="app-check"><input type="checkbox" name="Scholarship: understands it is partial" value="Understood" disabled> <span>I understand that the scholarship is partial. I'd still pay ₱45,000 for one week or ₱75,000 for two weeks, and my own flights.</span></label>
+          </div>
 
           <label>What's your art experience so far? "None" is a fine answer.<textarea name="Art experience" rows="3" required></textarea></label>
           <label>What do you hope to get out of the cohort?<textarea name="Hopes" rows="3" required></textarea></label>
@@ -1530,6 +1588,29 @@
   }
   window.addEventListener('scroll', update, { passive: true }); window.addEventListener('resize', update); window.addEventListener('load', update);
   update();
+})();
+</script>
+<script>
+/* The scholarship questions open only for someone applying for it. While closed they are switched off, so they are neither required nor sent. */
+(function () {
+  var box = document.getElementById('scholar-qs'); if (!box) return;
+  var picks = [].slice.call(document.querySelectorAll('[name="Applying for the partial scholarship"]'));
+  var fields = [].slice.call(box.querySelectorAll('input, textarea'));
+  function sync() {
+    var yes = picks.some(function (r) { return r.checked && r.value === 'Yes'; });
+    box.hidden = !yes;
+    fields.forEach(function (f) { f.disabled = !yes; f.required = yes; });
+  }
+  picks.forEach(function (r) { r.addEventListener('change', sync); });
+  sync();
+})();
+</script>
+<script>
+/* A link marked data-open-tab opens that tab when it is followed. */
+(function () {
+  [].slice.call(document.querySelectorAll('a[data-open-tab]')).forEach(function (a) {
+    a.addEventListener('click', function () { var t = document.querySelector('.g-tab[data-panel="' + a.getAttribute('data-open-tab') + '"]'); if (t) t.click(); });
+  });
 })();
 </script>
 <script data-goatcounter="https://unwakingart.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
