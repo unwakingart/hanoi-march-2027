@@ -915,12 +915,16 @@
   @media (max-width: 899px) { section[id] { scroll-margin-top: 52px; } }
   @media (min-width: 900px) { .pin-nav { display: none; } }
   @media (prefers-reduced-motion: reduce) { .pin-nav { transition: none; } }
-  /* The fee for people paying from abroad, and the line that explains it */
-  .g-rows dd small.usd { display: block; font-size: 12px; line-height: 1.35; color: #6B5744; margin-top: 2px; }
-  .note.two .g-rows dd small.usd { color: #D9D3AE; }
+  /* Fees: US dollars first, with the Philippine peso amount beneath, marked with the flag */
+  .g-rows dd .fee-usd { font-size: 19px; font-weight: 600; line-height: 1.2; }
+  .g-rows dd small.php, .h-note dd small.php { display: block; font-size: 12px; line-height: 1.4; color: #6B5744; margin-top: 3px; white-space: normal; }
+  .h-note dd small.php { font-size: 11px; margin-top: 4px; }
+  .note.two .g-rows dd small.php { color: #D9D3AE; }
+  .flag { display: inline-block; width: 17px; height: 8.5px; vertical-align: -0.5px; margin-right: 3px; box-shadow: 0 0 0 0.5px rgba(74,55,40,0.5); }
+  .g-head .flag { vertical-align: -1px; margin: 0 2px 0 1px; }
   .fee-intl { text-align: center; font-size: 13.5px; color: #4A3728; max-width: 560px; margin: 30px auto 0; }
 </style>
-<script>(function(){var v="20261009092806";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009093024";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -945,7 +949,7 @@
       <div class="h-stage">
         <div class="h-print"><img src="images/pencil-still-life.jpg" alt="A pencil still life of a bottle, a jar and a bowl"></div>
         <div class="h-note"><p class="h-note-title">[ All Girls Drawing Cohort ]</p>
-          <dl><dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd><dt>Location</dt><dd>Hanoi, Vietnam</dd><dt>Cohort fee</dt><dd>₱65,000 for one week<br>₱105,000 for two weeks</dd><dt>Apply by</dt><dd>Dec 31, 2026</dd></dl>
+          <dl><dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd><dt>Location</dt><dd>Hanoi, Vietnam</dd><dt>Cohort fee</dt><dd>US$1,100 for one week<br>US$1,750 for two weeks<small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱65,000 or ₱105,000 in Philippine pesos</small></dd><dt>Apply by</dt><dd>Dec 31, 2026</dd></dl>
         </div>
       </div>
     </div>
@@ -1063,7 +1067,7 @@
       <div class="glance note one" id="g-one">
         <p class="note-title">[ One week · Pencil ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd>₱65,000<small class="usd">US$1,100 if you pay from outside the Philippines</small></dd>
+          <dt>Cohort fee</dt><dd><b class="fee-usd">US$1,100</b><small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱65,000 Philippine pesos, if you pay from the Philippines</small></dd>
           <dt>Cohort dates</dt><dd>Mar 4–11, 2027</dd>
           <dt>Application deadline</dt><dd>Dec 31, 2026</dd>
         </dl>
@@ -1091,7 +1095,7 @@
           </div>
         </div>
         <div class="g-rule"></div>
-        <p class="g-head">Installment plan</p>
+        <p class="g-head">Installment plan · <svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> Philippine pesos</p>
         <div class="g-plan two">
           <span>Downpayment, within 24 hours of being accepted</span><span>₱20,000</span>
           <span>By Jan 15, 2027</span><span>₱15,000</span>
@@ -1103,7 +1107,7 @@
       <div class="glance note two" id="g-two">
         <p class="note-title">[ Two weeks · Pencil, Charcoal and Composition ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd>₱105,000<small class="usd">US$1,750 if you pay from outside the Philippines</small></dd>
+          <dt>Cohort fee</dt><dd><b class="fee-usd">US$1,750</b><small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱105,000 Philippine pesos, if you pay from the Philippines</small></dd>
           <dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd>
           <dt>Application deadline</dt><dd>Dec 31, 2026</dd>
         </dl>
@@ -1131,7 +1135,7 @@
           </div>
         </div>
         <div class="g-rule"></div>
-        <p class="g-head">Installment plan</p>
+        <p class="g-head">Installment plan · <svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> Philippine pesos</p>
         <div class="g-plan two">
           <span>Downpayment, within 24 hours of being accepted</span><span>₱30,000</span>
           <span>By Jan 15, 2027</span><span>₱25,000</span>
@@ -1141,7 +1145,7 @@
         </div>
       </div>
       </div>
-      <p class="fee-intl">Fees are in Philippine pesos. If you pay from outside the Philippines, the fee is in US dollars and you pay by Wise. Your installment amounts in dollars come with your acceptance.</p>
+      <p class="fee-intl">Fees are in US dollars. If you pay from the Philippines, you pay the Philippine peso amount. From anywhere else, you pay by Wise, and your installment amounts in dollars come with your acceptance.</p>
     </div>
   </section>
 
@@ -1333,11 +1337,12 @@
         </ul>
         <h3>Do I need a visa?</h3>
         <ul class="plain">
-          <li>It depends on your passport. Philippine passport holders can enter Vietnam visa-free for up to 21 days, which covers the whole trip. If you plan to arrive early or stay on, make sure your whole stay fits within that. Rules change and differ by country, so please check the current rule for your passport before you book anything.</li>
+          <li>It depends on your passport. Some passports can enter Vietnam without a visa for a set number of days. For example, Philippine passport holders can stay visa-free for up to 21 days, which covers the whole trip.</li>
+          <li>Rules change and differ by country, so please check the current rule for your passport before you book anything. If you plan to arrive early or stay on, make sure your whole stay fits within what your passport allows.</li>
         </ul>
         <h3>What's the weather like?</h3>
         <ul class="plain">
-          <li>It's summer in the Philippines, but March in Hanoi is cool and mild, usually around 17 to 23°C. Skies are often grey, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
+          <li>March in Hanoi is cool and mild, usually around 17 to 23°C. Skies are often grey, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
         </ul>
         <h3>What should I bring?</h3>
         <ul class="plain">
