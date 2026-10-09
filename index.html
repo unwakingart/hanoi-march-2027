@@ -945,7 +945,7 @@
   .scholar-qs[hidden] { display: none; }
   .app .scholar-note { font-size: 13.5px; font-weight: 400; color: #4A3728; margin: 0 0 14px; }
 </style>
-<script>(function(){var v="20261009103235";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009103707";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1243,7 +1243,7 @@
         </ul>
         <h3>How to apply for it</h3>
         <ul class="plain">
-          <li>In the <a href="#apply">application form</a>, answer "Yes" to the scholarship question. It opens a few short questions and asks for a link to your portfolio.</li>
+          <li>In the <a href="#apply">application form</a>, answer "Yes" to the scholarship question. It asks for a link to your portfolio.</li>
           <li>Apply by Dec 31, 2026. You'll hear back by January 5, 2027.</li>
           <li>If you're awarded it, you pay the same downpayment as everyone else within 24 hours, and the rest in three installments.</li>
         </ul>
@@ -1313,8 +1313,6 @@
           <div class="scholar-qs" id="scholar-qs" hidden>
             <p class="scholar-note">The partial scholarship is awarded for exceptional creative potential. Instead of paying the full fee, the scholar will only pay ₱45,000 for one week, or ₱75,000 for two weeks. You'll hear back by January 5, 2027.</p>
             <label>Link to your portfolio, or the Instagram account where you post your art<input type="text" name="Scholarship: portfolio link" inputmode="url" disabled></label>
-            <label>Tell me about your art practice. What do you make, and for how long?<textarea name="Scholarship: art practice" rows="3" disabled></textarea></label>
-            <label>What would this cohort do for your work?<textarea name="Scholarship: what the cohort would do" rows="3" disabled></textarea></label>
             <fieldset>
               <legend>If you aren't awarded the scholarship, would you still join at the full fee?</legend>
               <label class="app-pick"><input type="radio" name="Scholarship: would join at the full fee" value="Yes" disabled> Yes</label>
@@ -1334,7 +1332,7 @@
           </fieldset>
 
           <label>Any food allergies? If none, write "None".<input type="text" name="Food allergies" required></label>
-          <label>Anything else you'd like me to know?<textarea name="Anything else" rows="3"></textarea></label>
+          <label>Anything else you'd like me to know? If nothing, write "None".<textarea name="Anything else" rows="3" required></textarea></label>
 
           <div class="g-rule"></div>
           <fieldset class="app-agree">
