@@ -897,7 +897,7 @@
   /* Folder tabs are one uniform width, like index-card tabs: a quarter of the row each, with any spare room left empty on the right. */
   .g-wrap .g-tabs .g-tab, .know .g-tabs .g-tab, .know.n4 .g-tabs .g-tab { flex: 0 0 calc(25% - 4px); min-width: 0; }
 </style>
-<script>(function(){var v="20261009074643";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
+<script>(function(){var v="20261009082836";fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})})();</script>
 </head>
 <body>
 
@@ -1343,6 +1343,22 @@
   </section>
 
 </main>
+
+<script>
+/* The picture and its note are placed by hand, so their area has no natural height. Fit it to them, so no empty gap is left below. */
+(function () {
+  var stage = document.querySelector('.h-stage'); if (!stage) return;
+  function fit() {
+    var bottom = 0;
+    [].forEach.call(stage.children, function (c) { bottom = Math.max(bottom, c.offsetTop + c.offsetHeight); });
+    if (bottom) { stage.style.minHeight = '0'; stage.style.height = (bottom + 22) + 'px'; }
+  }
+  fit();
+  window.addEventListener('resize', fit); window.addEventListener('load', fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  [].forEach.call(stage.querySelectorAll('img'), function (i) { i.addEventListener('load', fit); });
+})();
+</script>
 
 
 <script>
