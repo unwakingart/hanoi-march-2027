@@ -944,12 +944,15 @@
   .g-plan.sch { max-width: 560px; column-gap: 22px; font-size: 14.5px; margin-top: 6px; }
   .g-plan.sch .g-h { white-space: nowrap; }
   .g-plan.art small { display: block; font-size: 12px; font-weight: 400; color: #6B5744; }
+  .know .g-panel.fact .sa-lede { margin: 0 0 18px; }
+  .know .g-panel.fact .sa-note { font-size: 13.5px; color: #6B5744; margin: 10px 0 0; }
+  .know .g-panel.fact .g-plan + h3, .know .g-panel.fact .sa-note + h3 { margin-top: 22px; }
   @media (max-width: 360px) { .g-plan.sch { column-gap: 10px; font-size: 12.5px; } .g-plan.sch .g-h { letter-spacing: 0.06em; } }
   .know .g-panel.fact ul + h3 { margin-top: 20px; }
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261010133320";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261010133955";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1240,19 +1243,26 @@
       </div>
       <div class="glance g-panel fact" id="ap-a" role="tabpanel" hidden>
         <h3>Studio access only, no lessons</h3>
+        <p class="sa-lede">For you if you already draw or paint, don't need beginner lessons, and want to travel with a group.</p>
+        <h3>What's the same</h3>
         <ul class="plain">
-          <li>This is for you if you already draw or paint, you don't need beginner lessons, and you want to travel with a group.</li>
-          <li>You stay with the cohort, take the same transport, and have everything else the cohort fee includes.</li>
-          <li>You don't join the drawing classes. While the cohort is in class, you have studio access to work on your own art. There are no lessons.</li>
-          <li>In week two, the drawing classes include a session of landscape sketching outdoors. That session is part of the classes, so studio access only doesn't include it.</li>
-          <li>The first-cohort fee is US$850 (₱50,000) for one week, or US$1,600 (₱95,000) for two weeks. The regular fee is US$1,000 (₱60,000) and US$1,850 (₱110,000). Flights are your own, as they are for everyone.</li>
+          <li>You stay with the cohort and take the same transport.</li>
+          <li>You get everything else the cohort fee includes: your bed, breakfast and lunch on class days, and the welcome dinner.</li>
         </ul>
-        <h3>How to apply for it</h3>
+        <h3>What's different</h3>
         <ul class="plain">
-          <li>In the <a href="#apply">application form</a>, choose "Studio access only, no lessons".</li>
-          <li>Places are limited.</li>
+          <li>You don't join the drawing classes. There are no lessons.</li>
+          <li>While the cohort is in class, you work on your own art in the studio.</li>
+          <li>In week two, the classes have one session of landscape sketching outdoors. It isn't part of studio access only.</li>
         </ul>
-        <h3>The installment plan for studio access only</h3>
+        <h3>The fee</h3>
+        <div class="g-plan sch art">
+          <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
+          <span>First-cohort fee</span><span><b>US$850</b><small>₱50,000</small></span><span><b>US$1,600</b><small>₱95,000</small></span>
+          <span>Regular fee</span><span>US$1,000<small>₱60,000</small></span><span>US$1,850<small>₱110,000</small></span>
+        </div>
+        <p class="sa-note">Flights are your own, as they are for everyone.</p>
+        <h3>Installment plan</h3>
         <div class="g-plan sch art">
           <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
           <span>Downpayment, within 24 hours of being accepted</span><span>US$350<small>₱20,000</small></span><span>US$550<small>₱30,000</small></span>
@@ -1261,6 +1271,10 @@
           <span>By Feb 15, 2027</span><span>US$100<small>₱5,000</small></span><span>US$250<small>₱15,000</small></span>
           <span class="g-t">Total</span><span class="g-t">US$850<small>₱50,000</small></span><span class="g-t">US$1,600<small>₱95,000</small></span>
         </div>
+        <h3>How to apply</h3>
+        <ul class="plain">
+          <li>In the <a href="#apply">application form</a>, choose "Studio access only, no lessons".</li>
+        </ul>
       </div>
       <div class="glance g-panel fact" id="ap-3" role="tabpanel" hidden>
         <h3>Cancellation policy</h3>
@@ -1409,7 +1423,7 @@
         </ul>
         <h3>How do we get to the art studio?</h3>
         <ul class="plain">
-          <li>Transport to and from the art studio is included. We take Grab together, to keep the cohort affordable.</li>
+          <li>Transport to and from the art studio is included. We ride together, by Grab or by van, depending on the size of the group.</li>
         </ul>
         <h3>What about laundry?</h3>
         <ul class="plain">
