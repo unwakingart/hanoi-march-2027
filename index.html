@@ -955,7 +955,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261012102432";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261012110254";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1526,6 +1526,13 @@
 (function () {
   var form = document.getElementById('app-form'); if (!form) return;
   var msg = document.getElementById('app-msg'), done = document.getElementById('app-done'), btn = form.querySelector('.app-send');
+  // A copy of each application goes to Michelle's Google Sheet (pages/sheet/Code.gs). The email is the record; this never blocks or fails the form.
+  var SHEET_URL = 'https://script.google.com/macros/s/AKfycbxHZqmnX1ZtEYnKbTjRNXLlFazfNBMvqrEAXtv9lpRjj3qB9BqclzFjaaqy5CYol7cHpw/exec';
+  function toSheet(data) {
+    if (!SHEET_URL) return;
+    var row = { form: 'hanoi' }; Object.keys(data).forEach(function (k) { row[k] = data[k]; });
+    try { fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(row) }).catch(function () {}); } catch (err) {}
+  }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var data = {}; new FormData(form).forEach(function (v, k) { data[k] = v; });
@@ -1533,7 +1540,7 @@
     fetch(form.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
       .then(function (r) { return r.json(); })
       .then(function (j) {
-        if (j && j.success) { if (window.goatcounter && window.goatcounter.count) { window.goatcounter.count({ path: 'application-sent', title: 'Application sent', event: true }); } form.hidden = true; done.hidden = false; done.scrollIntoView({ block: 'center' }); }
+        if (j && j.success) { toSheet(data); if (window.goatcounter && window.goatcounter.count) { window.goatcounter.count({ path: 'application-sent', title: 'Application sent', event: true }); } form.hidden = true; done.hidden = false; done.scrollIntoView({ block: 'center' }); }
         else { throw new Error('not sent'); }
       })
       .catch(function () {
