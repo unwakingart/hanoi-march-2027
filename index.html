@@ -955,7 +955,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014073358";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014073723";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1318,7 +1318,7 @@
         </div>
         <h3>How to apply</h3>
         <ul class="plain">
-          <li>Each of you fills in the <a href="#apply">application form</a>, chooses "Drawing classes, sharing an apartment", and names the other person.</li>
+          <li>One of you fills in the <a href="#apply">application form</a> for both of you: choose "Drawing classes, sharing an apartment" and add the other person's details.</li>
         </ul>
       </div>
       <div class="glance g-panel fact" id="ap-3" role="tabpanel" hidden>
@@ -1371,7 +1371,19 @@
           </fieldset>
 
           <fieldset id="app-share" hidden>
-            <label>Who are you sharing with? Their full name. They fill in this form too.<input type="text" name="Sharing an apartment with" id="app-share-name"></label>
+            <legend>Who are you sharing with? Please fill in their details too. This one form covers both of you.</legend>
+            <div class="app-row">
+              <label>Their name<input type="text" name="Second person: Name"></label>
+              <label class="app-short">Their age<input type="number" name="Second person: Age" min="18" max="99" inputmode="numeric"></label>
+            </div>
+            <div class="app-row">
+              <label>Their email<input type="email" name="Second person: Email"></label>
+              <label>Their Instagram handle<input type="text" name="Second person: Instagram" placeholder="@"></label>
+            </div>
+            <div class="app-row">
+              <label>Country they live in<input type="text" name="Second person: Country of residence"></label>
+              <label>Their nationality<input type="text" name="Second person: Nationality"></label>
+            </div>
           </fieldset>
 
           <fieldset>
@@ -1670,11 +1682,12 @@
 })();
 </script>
 <script>
-/* The "who are you sharing with" box shows, and is required, only when sharing an apartment is chosen. */
+/* The second person's details show, and are required, only when sharing an apartment is chosen. */
 (function () {
-  var box = document.getElementById('app-share'), name = document.getElementById('app-share-name');
+  var box = document.getElementById('app-share');
   if (!box) return;
-  function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; name.required = on; if (!on) name.value = ''; }
+  var fields = box.querySelectorAll('input');
+  function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; [].forEach.call(fields, function (f) { f.required = on; f.disabled = !on; if (!on) f.value = ''; }); }
   [].forEach.call(document.querySelectorAll('input[name="Classes or studio access"]'), function (r) { r.addEventListener('change', sync); });
   sync();
 })();
