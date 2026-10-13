@@ -955,7 +955,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261013130239";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014073224";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1203,6 +1203,7 @@
       <h2 class="g-title">[ How to apply ]</h2>
       <div class="g-tabs" role="tablist">
         <button type="button" class="g-tab on" role="tab" aria-selected="true" data-panel="ap-0">Application process</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-s">Sharing an apartment</button>
         <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-a">Studio access only</button>
         <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-3">Cancellation policy</button>
       </div>
@@ -1288,6 +1289,34 @@
           <li>In the <a href="#apply">application form</a>, choose "Studio access only, no lessons".</li>
         </ul>
       </div>
+      <div class="glance g-panel fact" id="ap-s" role="tabpanel" hidden>
+        <h3>Sharing an apartment</h3>
+        <p class="sa-lede">For two people who apply together and both join the drawing classes.</p>
+        <h3>How it works</h3>
+        <ul class="plain">
+          <li>You share one apartment. It has one double bed. The building has no twin rooms.</li>
+          <li>You both book the same stay: one week or two weeks.</li>
+        </ul>
+        <h3>The fee, for two people</h3>
+        <div class="g-plan sch art">
+          <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
+          <span>First-cohort fee, for two</span><span><b>US$1,600</b><small>₱95,000</small></span><span><b>US$2,900</b><small>₱170,000</small></span>
+        </div>
+        <p class="sa-note">This covers both of you, and includes everything the cohort fee does.</p>
+        <h3>Installment plan, for two people</h3>
+        <div class="g-plan sch art">
+          <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
+          <span>Downpayment, within 24 hours of being accepted</span><span>US$600<small>₱35,000</small></span><span>US$950<small>₱50,000</small></span>
+          <span>By Jan 15, 2027</span><span>US$425<small>₱25,000</small></span><span>US$725<small>₱45,000</small></span>
+          <span>By Jan 30, 2027</span><span>US$325<small>₱20,000</small></span><span>US$675<small>₱40,000</small></span>
+          <span>By Feb 15, 2027</span><span>US$250<small>₱15,000</small></span><span>US$550<small>₱35,000</small></span>
+          <span class="g-t">Total</span><span class="g-t">US$1,600<small>₱95,000</small></span><span class="g-t">US$2,900<small>₱170,000</small></span>
+        </div>
+        <h3>How to apply</h3>
+        <ul class="plain">
+          <li>Each of you fills in the <a href="#apply">application form</a>, chooses "Drawing classes, sharing an apartment", and names the other person.</li>
+        </ul>
+      </div>
       <div class="glance g-panel fact" id="ap-3" role="tabpanel" hidden>
         <h3>Cancellation policy</h3>
         <ul class="plain">
@@ -1331,15 +1360,20 @@
           </div>
 
           <fieldset>
-            <legend>Which program?</legend>
-            <label class="app-pick"><input type="radio" name="Program" value="One week: Pencil" required> One week: Pencil</label>
-            <label class="app-pick"><input type="radio" name="Program" value="Two weeks: Pencil, Composition and Sketching"> Two weeks: Pencil, Composition and Sketching</label>
+            <legend>What are you booking? See <a href="#payment" data-open-tab="ap-a">Studio access only</a> and <a href="#payment" data-open-tab="ap-s">Sharing an apartment</a>.</legend>
+            <label class="app-pick"><input type="radio" name="Classes or studio access" value="Drawing classes" required checked> Drawing classes, my own apartment</label>
+            <label class="app-pick"><input type="radio" name="Classes or studio access" value="Drawing classes, sharing an apartment"> Drawing classes, sharing an apartment</label>
+            <label class="app-pick"><input type="radio" name="Classes or studio access" value="Studio access only, no lessons"> Studio access only, no lessons</label>
+          </fieldset>
+
+          <fieldset id="app-share" hidden>
+            <label>Who are you sharing with? Their full name. They fill in this form too.<input type="text" name="Sharing an apartment with" id="app-share-name"></label>
           </fieldset>
 
           <fieldset>
-            <legend>Are you joining the drawing classes? <a href="#payment" data-open-tab="ap-a">Studio access only</a> is for people who already draw or paint and don't need lessons.</legend>
-            <label class="app-pick"><input type="radio" name="Classes or studio access" value="Drawing classes" required checked> Drawing classes</label>
-            <label class="app-pick"><input type="radio" name="Classes or studio access" value="Studio access only, no lessons"> Studio access only, no lessons</label>
+            <legend>How long are you staying?</legend>
+            <label class="app-pick"><input type="radio" name="Program" value="One week: Pencil" required> One week · Mar 4 to 11</label>
+            <label class="app-pick"><input type="radio" name="Program" value="Two weeks: Pencil, Composition and Sketching"> Two weeks · Mar 4 to 18</label>
           </fieldset>
 
           <label>What's your art experience so far? "None" is a fine answer.<textarea name="Art experience" rows="3" required></textarea></label>
@@ -1402,7 +1436,7 @@
           <li>You stay in your own serviced apartment in Tây Hồ, Hanoi's West Lake district, near Lotte Mall. It's yours alone, with a double bed, a private bathroom and your own kitchen. It's an aparthotel, not a hotel, and the building has a lift.</li>
           <li>We all stay in the same building, so the group is always close by, and you still have a quiet place of your own at the end of the day.</li>
           <li>Your apartment has a double bed, so you're welcome to bring a companion at no extra charge. Your companion isn't part of the cohort: the classes, the welcome dinner and our Grab rides are for participants only.</li>
-          <li>The building has no twin rooms, so an apartment can't be shared between two drawing cohort participants, and the fee can't be split.</li>
+          <li>Every apartment has one double bed. The building has no twin rooms. Two participants who are happy to share a bed can share an apartment: see <a href="#payment">Sharing an apartment</a>, under How to apply.</li>
         </ul>
       </div>
       <div class="glance g-panel fact" id="k-1" role="tabpanel" hidden>
@@ -1629,6 +1663,16 @@
   [].slice.call(document.querySelectorAll('a[data-open-tab]')).forEach(function (a) {
     a.addEventListener('click', function () { var t = document.querySelector('.g-tab[data-panel="' + a.getAttribute('data-open-tab') + '"]'); if (t) t.click(); });
   });
+})();
+</script>
+<script>
+/* The "who are you sharing with" box shows, and is required, only when sharing an apartment is chosen. */
+(function () {
+  var box = document.getElementById('app-share'), name = document.getElementById('app-share-name');
+  if (!box) return;
+  function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; name.required = on; if (!on) name.value = ''; }
+  [].forEach.call(document.querySelectorAll('input[name="Classes or studio access"]'), function (r) { r.addEventListener('change', sync); });
+  sync();
 })();
 </script>
 <script data-goatcounter="https://unwakingart.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
