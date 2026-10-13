@@ -956,7 +956,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014075003";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014075057";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1392,6 +1392,18 @@
             <label class="app-pick"><input type="radio" name="Bringing a companion" value="No"> No</label>
           </fieldset>
 
+          <fieldset id="app-companion-details" hidden>
+            <legend>Your companion's details. The property needs these.</legend>
+            <div class="app-row">
+              <label>Their name<input type="text" name="Companion: Name"></label>
+              <label class="app-short">Their age<input type="number" name="Companion: Age" min="0" max="99" inputmode="numeric"></label>
+            </div>
+            <div class="app-row">
+              <label>Country they live in<input type="text" name="Companion: Country of residence"></label>
+              <label>Their nationality<input type="text" name="Companion: Nationality"></label>
+            </div>
+          </fieldset>
+
           <fieldset>
             <legend>How long are you staying?</legend>
             <label class="app-pick"><input type="radio" name="Program" value="One week: Pencil" required> One week · Mar 4 to 11</label>
@@ -1693,9 +1705,13 @@
   function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; [].forEach.call(fields, function (f) { f.required = on; f.disabled = !on; if (!on) f.value = ''; });
     /* For a pair, the questions and tick boxes are worded for both people, and the companion question is left out. */
     [].forEach.call(document.querySelectorAll('[data-two]'), function (el) { if (el.dataset.one == null) el.dataset.one = el.innerHTML; el.innerHTML = on ? el.dataset.two : el.dataset.one; });
-    var comp = document.getElementById('app-companion');
+    var comp = document.getElementById('app-companion'), det = document.getElementById('app-companion-details');
     if (comp) { comp.hidden = on; [].forEach.call(comp.querySelectorAll('input'), function (f) { f.disabled = on; }); }
+    /* The companion's details show, and are required, only when a companion is coming. */
+    var bring = !on && !!document.querySelector('input[name="Bringing a companion"][value="Yes"]:checked');
+    if (det) { det.hidden = !bring; [].forEach.call(det.querySelectorAll('input'), function (f) { f.required = bring; f.disabled = !bring; if (!bring) f.value = ''; }); }
   }
+  [].forEach.call(document.querySelectorAll('input[name="Bringing a companion"]'), function (r) { r.addEventListener('change', sync); });
   [].forEach.call(document.querySelectorAll('input[name="Classes or studio access"]'), function (r) { r.addEventListener('change', sync); });
   sync();
 })();
