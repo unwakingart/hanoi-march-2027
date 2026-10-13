@@ -839,6 +839,7 @@
   .app .app-check { display: flex; gap: 9px; align-items: flex-start; font-weight: 400; font-size: 14px; color: #2C2418; margin: 0 0 9px; cursor: pointer; }
   .app .app-check input { accent-color: #4A3728; margin-top: 4px; flex: none; width: 15px; height: 15px; }
   .app .app-check.app-opt { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(74,55,40,0.25); }
+  .app .app-privacy { font-size: 14px; font-style: italic; color: #6B5744; margin: 14px 0 12px; }
 
   /* ---------- Closing and footer ---------- */
   .end { text-align: center; padding: 50px 0 46px; }
@@ -955,7 +956,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014074632";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014074735";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1420,6 +1421,7 @@
           </fieldset>
           <label class="app-check app-opt"><input type="checkbox" name="Emails about future workshops and trips" value="Yes"> <span>Optional: I'd like to receive emails from unwakingart about future workshops, art study trips and art retreats. No spam, ever.</span></label>
 
+          <p class="app-privacy">I use these details only to arrange the cohort.</p>
           <button type="submit" class="button app-send">Submit application</button>
           <p class="app-msg" id="app-msg" role="status"></p>
         </form>
