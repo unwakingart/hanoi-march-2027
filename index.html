@@ -955,7 +955,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014073921";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014074037";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1391,32 +1391,32 @@
             <label class="app-pick"><input type="radio" name="Program" value="Two weeks: Pencil, Composition and Sketching"> Two weeks · Mar 4 to 18</label>
           </fieldset>
 
-          <label>What's your art experience so far? "None" is a fine answer.<textarea name="Art experience" rows="3" required></textarea></label>
-          <label>What do you hope to get out of the cohort?<textarea name="Hopes" rows="3" required></textarea></label>
+          <label><span data-two="What&#x27;s the art experience of each of you so far? &quot;None&quot; is a fine answer.">What's your art experience so far? "None" is a fine answer.</span><textarea name="Art experience" rows="3" required></textarea></label>
+          <label><span data-two="What do you each hope to get out of the cohort?">What do you hope to get out of the cohort?</span><textarea name="Hopes" rows="3" required></textarea></label>
 
           <fieldset>
-            <legend>Are you comfortable with short walks on uneven streets, several times a day?</legend>
+            <legend><span data-two="Are you both comfortable with short walks on uneven streets, several times a day?">Are you comfortable with short walks on uneven streets, several times a day?</span></legend>
             <label class="app-pick"><input type="radio" name="Comfortable with walking" value="Yes" required> Yes</label>
             <label class="app-pick"><input type="radio" name="Comfortable with walking" value="Not sure"> Not sure</label>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="app-companion">
             <legend>Are you bringing a companion to stay in your apartment?</legend>
             <label class="app-pick"><input type="radio" name="Bringing a companion" value="Yes" required> Yes</label>
             <label class="app-pick"><input type="radio" name="Bringing a companion" value="No"> No</label>
           </fieldset>
 
-          <label>Any food allergies, or food you don't eat? For example, a nut allergy, vegetarian, or no pork. It's for our welcome dinner. If none, write "None".<input type="text" name="Food allergies and preferences" required></label>
+          <label><span data-two="Any food allergies, or food either of you doesn&#x27;t eat? For example, a nut allergy, vegetarian, or no pork. Please say who. It&#x27;s for our welcome dinner. If none, write &quot;None&quot;.">Any food allergies, or food you don't eat? For example, a nut allergy, vegetarian, or no pork. It's for our welcome dinner. If none, write "None".</span><input type="text" name="Food allergies and preferences" required></label>
           <label>Anything else you'd like me to know? If nothing, write "None".<textarea name="Anything else" rows="3" required></textarea></label>
 
           <div class="g-rule"></div>
           <fieldset class="app-agree">
-            <legend>Please tick each one to apply</legend>
-            <label class="app-check"><input type="checkbox" name="Photo and video consent" value="Agreed" required> <span>I agree to be photographed and filmed during the cohort, and to unwakingart using those photos and videos for marketing and advertising purposes.</span></label>
-            <label class="app-check"><input type="checkbox" name="Instagram group chat" value="Agreed" required> <span>I understand that I'll be added to an Instagram group chat with the other participants.</span></label>
-            <label class="app-check"><input type="checkbox" name="Cancellation policy" value="Read and understood" required> <span>I've read and understand the <a href="#payment">cancellation policy</a>.</span></label>
-            <label class="app-check"><input type="checkbox" name="Flights and travel insurance" value="Will arrange my own" required> <span>I'll arrange my own flights and travel insurance.</span></label>
-            <label class="app-check"><input type="checkbox" name="Passport valid to Sept 2027" value="Yes" required> <span>My passport is valid until at least September 2027.</span></label>
+            <legend><span data-two="Please tick each one to apply. You&#x27;re ticking for both of you.">Please tick each one to apply</span></legend>
+            <label class="app-check"><input type="checkbox" name="Photo and video consent" value="Agreed" required> <span data-two="We both agree to be photographed and filmed during the cohort, and to unwakingart using those photos and videos for marketing and advertising purposes.">I agree to be photographed and filmed during the cohort, and to unwakingart using those photos and videos for marketing and advertising purposes.</span></label>
+            <label class="app-check"><input type="checkbox" name="Instagram group chat" value="Agreed" required> <span data-two="We understand that we&#x27;ll both be added to an Instagram group chat with the other participants.">I understand that I'll be added to an Instagram group chat with the other participants.</span></label>
+            <label class="app-check"><input type="checkbox" name="Cancellation policy" value="Read and understood" required> <span data-two="We&#x27;ve both read and understand the &lt;a href=&quot;#payment&quot;&gt;cancellation policy&lt;/a&gt;.">I've read and understand the <a href="#payment">cancellation policy</a>.</span></label>
+            <label class="app-check"><input type="checkbox" name="Flights and travel insurance" value="Will arrange my own" required> <span data-two="We&#x27;ll each arrange our own flights and travel insurance.">I'll arrange my own flights and travel insurance.</span></label>
+            <label class="app-check"><input type="checkbox" name="Passport valid to Sept 2027" value="Yes" required> <span data-two="Both our passports are valid until at least September 2027.">My passport is valid until at least September 2027.</span></label>
           </fieldset>
           <label class="app-check app-opt"><input type="checkbox" name="Emails about future workshops and trips" value="Yes"> <span>Optional: I'd like to receive emails from unwakingart about future workshops, art study trips and art retreats. No spam, ever.</span></label>
 
@@ -1675,8 +1675,10 @@
 <script>
 /* A link marked data-open-tab opens that tab when it is followed. */
 (function () {
-  [].slice.call(document.querySelectorAll('a[data-open-tab]')).forEach(function (a) {
-    a.addEventListener('click', function () { var t = document.querySelector('.g-tab[data-panel="' + a.getAttribute('data-open-tab') + '"]'); if (t) t.click(); });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-open-tab]');
+    if (!a) return;
+    var t = document.querySelector('.g-tab[data-panel="' + a.getAttribute('data-open-tab') + '"]'); if (t) t.click();
   });
 })();
 </script>
@@ -1686,7 +1688,12 @@
   var box = document.getElementById('app-share');
   if (!box) return;
   var fields = box.querySelectorAll('input');
-  function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; [].forEach.call(fields, function (f) { f.required = on; f.disabled = !on; if (!on) f.value = ''; }); }
+  function sync() { var on = !!document.querySelector('input[name="Classes or studio access"][value="Drawing classes, sharing an apartment"]:checked'); box.hidden = !on; [].forEach.call(fields, function (f) { f.required = on; f.disabled = !on; if (!on) f.value = ''; });
+    /* For a pair, the questions and tick boxes are worded for both people, and the companion question is left out. */
+    [].forEach.call(document.querySelectorAll('[data-two]'), function (el) { if (el.dataset.one == null) el.dataset.one = el.innerHTML; el.innerHTML = on ? el.dataset.two : el.dataset.one; });
+    var comp = document.getElementById('app-companion');
+    if (comp) { comp.hidden = on; [].forEach.call(comp.querySelectorAll('input'), function (f) { f.disabled = on; }); }
+  }
   [].forEach.call(document.querySelectorAll('input[name="Classes or studio access"]'), function (r) { r.addEventListener('change', sync); });
   sync();
 })();
