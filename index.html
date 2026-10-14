@@ -957,7 +957,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014110121";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014112852";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1367,6 +1367,7 @@
             <label>Name<input type="text" name="Name" required autocomplete="name"></label>
             <label class="app-short">Age<input type="number" name="Age" min="18" max="99" required inputmode="numeric"></label>
           </div>
+          <label>What would you like to be called? A nickname is fine.<input type="text" name="Nickname" required></label>
           <div class="app-row">
             <label>Email<input type="email" name="email" required autocomplete="email"></label>
             <label>Instagram handle<input type="text" name="Instagram" placeholder="@" required></label>
@@ -1389,6 +1390,7 @@
               <label>Their name<input type="text" name="Second person: Name"></label>
               <label class="app-short">Their age<input type="number" name="Second person: Age" min="18" max="99" inputmode="numeric"></label>
             </div>
+            <label>What would they like to be called?<input type="text" name="Second person: Nickname"></label>
             <div class="app-row">
               <label>Their email<input type="email" name="Second person: Email"></label>
               <label>Their Instagram handle<input type="text" name="Second person: Instagram" placeholder="@"></label>
