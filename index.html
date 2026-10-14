@@ -957,7 +957,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261015073921";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261015074341";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1351,6 +1351,73 @@
 
   <div class="divider"></div>
 
+  <!-- 7. Read this before you sign up -->
+  <section id="read-this">
+    <div class="g-wrap know n4">
+      <h2 class="g-title">[ Good to know ]</h2>
+      <div class="know-intro"><p>Before you apply, here are some things that you should know to see if this is the right fit for you.</p></div>
+      <div class="g-tabs" role="tablist">
+        <button type="button" class="g-tab on" role="tab" aria-selected="true" data-panel="k-0">Stay</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-1">Tây Hồ</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-3">Meals</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-4">Travel</button>
+      </div>
+      <div class="glance g-panel fact" id="k-0" role="tabpanel">
+        <h3>You have your own serviced apartment</h3>
+        <ul class="plain">
+          <li>You stay in your own serviced apartment in Tây Hồ, Hanoi's West Lake district, near Lotte Mall. It's yours alone, with a double bed, a private bathroom and your own kitchen. It's an aparthotel, not a hotel: it's cleaned once a week, in the middle of the week. The building has a lift.</li>
+          <li>We all stay in the same building, so the group is always close by, and you still have a quiet place of your own at the end of the day.</li>
+          <li>You're welcome to bring a companion at no extra charge. Your companion isn't part of the cohort: the classes, the welcome dinner and our shared car to the studio are for participants only.</li>
+          <li>Two participants who are happy to share the bed can share an apartment instead, without a companion: see <a href="#payment">Sharing an apartment</a>, under How to apply.</li>
+        </ul>
+      </div>
+      <div class="glance g-panel fact" id="k-1" role="tabpanel" hidden>
+        <h3>We stay in Tây Hồ, by West Lake</h3>
+        <ul class="plain">
+          <li>Tây Hồ is the district around West Lake. It's a diverse area, with cafés and restaurants of many cuisines. Lotte Mall is nearby for groceries and anything you forgot to pack.</li>
+          <li>Your evenings are free. When you want the busy side of Hanoi, the Old Quarter is a short taxi ride away.</li>
+          <li>The apartments and the studio are both down lanes that cars can't enter, which is normal in Hanoi, and it's how you get to see the everyday city up close. Every ride starts and ends with a short walk, so you'll want to be comfortable walking on uneven streets.</li>
+        </ul>
+      </div>
+      <div class="glance g-panel fact" id="k-3" role="tabpanel" hidden>
+        <h3>Meals are your own</h3>
+        <ul class="plain">
+          <li>Only our welcome buffet dinner on the first evening is included. Your apartment has a kitchen, and Lotte Mall is nearby if you'd like to buy groceries.</li>
+          <li>Lunch is on your own. There's no group lunch, so the two-hour break is yours to eat wherever you like. A few places are a short walk from the studio, or you can take a taxi further, at your own cost.</li>
+        </ul>
+      </div>
+      <div class="glance g-panel fact faq" id="k-4" role="tabpanel" hidden>
+        <h3>Flights are not included</h3>
+        <ul class="plain">
+          <li>That leaves you free to plan the trip your way. Come a few days early or stay on afterwards to see more of Vietnam.</li>
+        </ul>
+        <h3>Do I need a visa?</h3>
+        <ul class="plain">
+          <li>It depends on your passport. Some passports can enter Vietnam without a visa for a set number of days. For example, Philippine passport holders can stay visa-free for up to 21 days, which covers the whole trip.</li>
+          <li>Rules change and differ by country, so please check the current rule for your passport before you book anything. If you plan to arrive early or stay on, make sure your whole stay fits within what your passport allows.</li>
+        </ul>
+        <h3>What's the weather like?</h3>
+        <ul class="plain">
+          <li>March in Hanoi is cool and mild, usually around 18 to 23°C. Skies are often gray, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
+        </ul>
+        <h3>What should I bring?</h3>
+        <ul class="plain">
+          <li>A light jacket or a few layers, and a small umbrella for the drizzle. Bring comfortable shoes for walking too.</li>
+        </ul>
+        <h3>How do we get to the art studio?</h3>
+        <ul class="plain">
+          <li>Transport to and from the art studio is included. We share one car there and back, to keep the cohort affordable.</li>
+        </ul>
+        <h3>What about laundry?</h3>
+        <ul class="plain">
+          <li>The building has a washer and dryer.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- Application form: sent to Michelle's inbox through Web3Forms -->
   <section id="apply">
     <div class="g-wrap know">
@@ -1468,73 +1535,6 @@
           <p>I read every application and reply to everyone by Instagram DM, within 24 hours.</p>
         </div>
       </div>
-      </div>
-    </div>
-  </section>
-
-    <div class="divider"></div>
-
-<!-- 7. Read this before you sign up -->
-  <section id="read-this">
-    <div class="g-wrap know n4">
-      <h2 class="g-title">[ Good to know ]</h2>
-      <div class="know-intro"><p>Before you apply, here are some things that you should know to see if this is the right fit for you.</p></div>
-      <div class="g-tabs" role="tablist">
-        <button type="button" class="g-tab on" role="tab" aria-selected="true" data-panel="k-0">Stay</button>
-        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-1">Tây Hồ</button>
-        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-3">Meals</button>
-        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="k-4">Travel</button>
-      </div>
-      <div class="glance g-panel fact" id="k-0" role="tabpanel">
-        <h3>You have your own serviced apartment</h3>
-        <ul class="plain">
-          <li>You stay in your own serviced apartment in Tây Hồ, Hanoi's West Lake district, near Lotte Mall. It's yours alone, with a double bed, a private bathroom and your own kitchen. It's an apartment, not a hotel: it's cleaned once a week, in the middle of the week. The building has a lift.</li>
-          <li>We all stay in the same building, so the group is always close by, and you still have a quiet place of your own at the end of the day.</li>
-          <li>You're welcome to bring a companion at no extra charge. Your companion isn't part of the cohort: the classes, the welcome dinner and our shared car to the studio are for participants only.</li>
-          <li>Two participants who are happy to share the bed can share an apartment instead, without a companion: see <a href="#payment">Sharing an apartment</a>, under How to apply.</li>
-        </ul>
-      </div>
-      <div class="glance g-panel fact" id="k-1" role="tabpanel" hidden>
-        <h3>We stay in Tây Hồ, by West Lake</h3>
-        <ul class="plain">
-          <li>Tây Hồ is the district around West Lake. It's a diverse area, with cafés and restaurants of many cuisines. Lotte Mall is nearby for groceries and anything you forgot to pack.</li>
-          <li>Your evenings are free. When you want the busy side of Hanoi, the Old Quarter is a short taxi ride away.</li>
-          <li>The apartments and the studio are both down lanes that cars can't enter, which is normal in Hanoi, and it's how you get to see the everyday city up close. Every ride starts and ends with a short walk, so you'll want to be comfortable walking on uneven streets.</li>
-        </ul>
-      </div>
-      <div class="glance g-panel fact" id="k-3" role="tabpanel" hidden>
-        <h3>Meals are your own</h3>
-        <ul class="plain">
-          <li>Only our welcome buffet dinner on the first evening is included. Your apartment has a kitchen, and Lotte Mall is nearby if you'd like to buy groceries.</li>
-          <li>Lunch is on your own. There's no group lunch, so the two-hour break is yours to eat wherever you like. A few places are a short walk from the studio, or you can take a taxi further, at your own cost.</li>
-        </ul>
-      </div>
-      <div class="glance g-panel fact faq" id="k-4" role="tabpanel" hidden>
-        <h3>Flights are not included</h3>
-        <ul class="plain">
-          <li>That leaves you free to plan the trip your way. Come a few days early or stay on afterwards to see more of Vietnam.</li>
-        </ul>
-        <h3>Do I need a visa?</h3>
-        <ul class="plain">
-          <li>It depends on your passport. Some passports can enter Vietnam without a visa for a set number of days. For example, Philippine passport holders can stay visa-free for up to 21 days, which covers the whole trip.</li>
-          <li>Rules change and differ by country, so please check the current rule for your passport before you book anything. If you plan to arrive early or stay on, make sure your whole stay fits within what your passport allows.</li>
-        </ul>
-        <h3>What's the weather like?</h3>
-        <ul class="plain">
-          <li>March in Hanoi is cool and mild, usually around 17 to 23°C. Skies are often gray, with light drizzle on many days. It's comfortable weather for walking around and for long days in the art studio.</li>
-        </ul>
-        <h3>What should I bring?</h3>
-        <ul class="plain">
-          <li>A light jacket or a few layers, and a small umbrella for the drizzle. Bring comfortable shoes for walking too.</li>
-        </ul>
-        <h3>How do we get to the art studio?</h3>
-        <ul class="plain">
-          <li>Transport to and from the art studio is included. We share one car there and back, to keep the cohort affordable.</li>
-        </ul>
-        <h3>What about laundry?</h3>
-        <ul class="plain">
-          <li>The building has a washer and dryer.</li>
-        </ul>
       </div>
     </div>
   </section>
