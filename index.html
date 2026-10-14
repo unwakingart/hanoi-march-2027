@@ -956,7 +956,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014080409";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014080502";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1431,6 +1431,15 @@
 
           <label><span data-two="Any food allergies, or food either of you doesn&#x27;t eat? For example, a nut allergy, vegetarian, or no pork. Please say who. It&#x27;s for our welcome dinner. If none, write &quot;None&quot;.">Any food allergies, or food you don't eat? For example, a nut allergy, vegetarian, or no pork. It's for our welcome dinner. If none, write "None".</span><input type="text" name="Food allergies and preferences" required></label>
           <label>Anything else you'd like me to know? If nothing, write "None".<textarea name="Anything else" rows="3" required></textarea></label>
+
+          <fieldset>
+            <legend><span data-two="Emergency contact: someone I can reach if something happens to either of you during the trip.">Emergency contact: someone I can reach if something happens to you during the trip.</span></legend>
+            <div class="app-row app-three">
+              <label>Their name<input type="text" name="Emergency contact name" required></label>
+              <label>Relationship to you<input type="text" name="Emergency contact relationship" required></label>
+              <label>Their email<input type="email" name="Emergency contact email" required></label>
+            </div>
+          </fieldset>
 
           <div class="g-rule"></div>
           <fieldset class="app-agree">
