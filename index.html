@@ -813,7 +813,7 @@
   .app-msg { margin: 10px 0 0; font-size: 13.5px; color: #8A3B2A; min-height: 1em; }
   .app-done h3 { font-size: 18px; margin-bottom: 6px; }
   .app-done p { margin: 0; }
-  @media (min-width: 700px) { .glance.app { padding: 34px 40px 30px; } .app-row { grid-template-columns: 1fr 1fr; } .app-row .app-short { max-width: 140px; } }
+  @media (min-width: 700px) { .glance.app { padding: 34px 40px 30px; } .app-row { grid-template-columns: 1fr 1fr; } .app-row .app-short { max-width: 140px; } .app-row.app-three { grid-template-columns: 1fr 1fr 1fr; } }
   .h-plus { font-size: 10px; line-height: 1; color: #4A3728; margin: 5px 0 0; }
   .hero2 h1 { margin-top: 5px; }
 
@@ -956,7 +956,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261014075942";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261014080409";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1210,7 +1210,7 @@
         <button type="button" class="g-tab on" role="tab" aria-selected="true" data-panel="ap-0">Application process</button>
         <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-s">Sharing an apartment</button>
         <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-a">Studio access only</button>
-        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-3">Cancellation policy</button>
+        <button type="button" class="g-tab" role="tab" aria-selected="false" data-panel="ap-3">Policies</button>
       </div>
       <div class="glance g-panel fact" id="ap-0" role="tabpanel">
         <h3>Application process</h3>
@@ -1324,11 +1324,21 @@
       <div class="glance g-panel fact" id="ap-3" role="tabpanel" hidden>
         <h3>Cancellation policy</h3>
         <ul class="plain">
-        <li>The downpayment and installments are non-refundable, because the cohort has to run for the rest of the group.</li>
-        <li>You may transfer your spot to a friend, who fills in the application form as well.</li>
-        <li>Travel insurance is required.</li>
-        <li>Installments should be paid within 24 hours of the due date. If one isn't, your spot is canceled and what you've already paid isn't refunded.</li>
-        <li>If I have to cancel for reasons outside my control, such as severe weather, a natural disaster, political unrest, a health emergency or travel restrictions, you get back everything you paid. Flights are your own.</li>
+        <li><b>No refunds.</b> The downpayment and installments are non-refundable, because the cohort has to run for the rest of the group.</li>
+        <li><b>Transfers.</b> You may transfer your spot to a friend, who fills in the application form as well.</li>
+        <li><b>Late payments.</b> Installments should be paid within 24 hours of the due date. If one isn't, your spot is canceled and what you've already paid isn't refunded.</li>
+        <li><b>If the cohort is canceled.</b> If I have to cancel for reasons outside my control, such as severe weather, a natural disaster, political unrest, a health emergency or travel restrictions, you get back everything you paid. Flights are your own.</li>
+      </ul>
+        <h3>Terms and waiver</h3>
+        <ul class="plain">
+        <li><b>You travel at your own risk.</b> You join by choice and accept the ordinary risks of travel, such as illness, injury, accidents, theft and delays. That includes your free time: anything outside the classes and the welcome dinner is at your own risk and cost.</li>
+        <li><b>Your responsibility.</b> You are responsible for your own safety, health, belongings and medical costs. Travel insurance that covers medical care abroad is required.</li>
+        <li><b>Release.</b> unwakingart is not liable for injury, illness, loss or damage during the trip, and any claim is limited to the cohort fee you paid. The studio, the apartments and Grab are independent businesses, each responsible for its own service.</li>
+        <li><b>Visa and entry.</b> You are responsible for your visa and for meeting Vietnam's entry rules. If you are refused entry or miss the trip, the cancellation policy applies.</li>
+        <li><b>Your apartment and companion.</b> You are responsible for your companion, and for any damage either of you cause to your apartment. These terms apply to your companion too.</li>
+        <li><b>Conduct.</b> You follow Vietnam's laws and the rules of the studio and your apartment building. For serious misconduct you may be asked to leave, with no refund.</li>
+        <li><b>Materials and allergies.</b> We draw with pencils, erasers and other drawing materials, which can cause reactions in people with allergies, asthma or other sensitivities. You are responsible for knowing your own. If you have any, please check with your doctor before you apply.</li>
+        <li><b>Changes.</b> If needed, the schedule, the instructor or the apartment may change to something equivalent.</li>
       </ul>
       </div>
     </div>
@@ -1427,7 +1437,8 @@
             <legend><span data-two="Please tick each one to apply. You&#x27;re ticking for both of you.">Please tick each one to apply</span></legend>
             <label class="app-check"><input type="checkbox" name="Photo and video consent" value="Agreed" required> <span data-two="We both agree to be photographed and filmed during the cohort, and to unwakingart using those photos and videos for marketing and advertising purposes.">I agree to be photographed and filmed during the cohort, and to unwakingart using those photos and videos for marketing and advertising purposes.</span></label>
             <label class="app-check"><input type="checkbox" name="Instagram group chat" value="Agreed" required> <span data-two="We understand that we&#x27;ll both be added to an Instagram group chat with the other participants.">I understand that I'll be added to an Instagram group chat with the other participants.</span></label>
-            <label class="app-check"><input type="checkbox" name="Cancellation policy" value="Read and understood" required> <span data-two="We&#x27;ve both read and understand the &lt;a href=&quot;#payment&quot;&gt;cancellation policy&lt;/a&gt;.">I've read and understand the <a href="#payment">cancellation policy</a>.</span></label>
+            <label class="app-check"><input type="checkbox" name="Cancellation policy" value="Read and understood" required> <span data-two="We&#x27;ve both read and understand the &lt;a href=&quot;#payment&quot; data-open-tab=&quot;ap-3&quot;&gt;cancellation policy&lt;/a&gt;.">I've read and understand the <a href="#payment" data-open-tab="ap-3">cancellation policy</a>.</span></label>
+            <label class="app-check"><input type="checkbox" name="Terms and waiver" value="Read and agreed" required> <span data-two="We&#x27;ve both read and agree to the &lt;a href=&quot;#payment&quot; data-open-tab=&quot;ap-3&quot;&gt;terms and waiver&lt;/a&gt;, and we&#x27;ll follow Vietnam&#x27;s laws and the rules of the studio and our apartment building.">I've read and agree to the <a href="#payment" data-open-tab="ap-3">terms and waiver</a>, and I'll follow Vietnam's laws and the rules of the studio and my apartment building.</span></label>
             <label class="app-check"><input type="checkbox" name="Flights and travel insurance" value="Will arrange my own" required> <span data-two="We&#x27;ll each arrange our own flights and travel insurance.">I'll arrange my own flights and travel insurance.</span></label>
             <label class="app-check"><input type="checkbox" name="Passport valid to Sept 2027" value="Yes" required> <span data-two="Both our passports are valid until at least September 2027.">My passport is valid until at least September 2027.</span></label>
           </fieldset>
