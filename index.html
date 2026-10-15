@@ -922,24 +922,10 @@
   @media (max-width: 899px) { section[id] { scroll-margin-top: 52px; } }
   @media (min-width: 900px) { .pin-nav { display: none; } }
   @media (prefers-reduced-motion: reduce) { .pin-nav { transition: none; } }
-  /* Fees: US dollars first, with the Philippine peso amount beneath, marked with the flag */
+  /* Fees, in US dollars */
   .g-rows dd .fee-usd { font-size: 19px; font-weight: 600; line-height: 1.2; }
-  .g-rows dd small.php, .h-note dd small.php { display: block; font-size: 12px; line-height: 1.4; color: #6B5744; margin-top: 3px; white-space: normal; }
-  .h-note dd small.php { font-size: 11px; margin-top: 4px; }
-  .note.two .g-rows dd small.php { color: #E6D6B0; }
   .g-rows dd small.reg { display: block; font-size: 12px; line-height: 1.4; color: #6B5744; margin-top: 4px; white-space: normal; }
   .note.two .g-rows dd small.reg { color: #E6D6B0; }
-  .flag { display: inline-block; width: 17px; height: 8.5px; vertical-align: -0.5px; margin-right: 3px; box-shadow: 0 0 0 0.5px rgba(74,55,40,0.5); }
-  .g-head .flag { vertical-align: -1px; margin: 0 2px 0 1px; }
-  .g-plan.both { grid-template-columns: 1fr auto auto; column-gap: 16px; align-items: baseline; }
-  .g-plan.both .g-h { white-space: nowrap; }
-  .g-plan.both .php { font-size: 12px; color: #6B5744; }
-  .note.two .g-plan.both .php { color: #E6D6B0; }
-  .g-plan.both .g-t.php { font-weight: 400; }
-  .g-plan .flag { vertical-align: -0.5px; }
-  .g-plan .g-h .flag { width: 21px; height: 10.5px; margin-right: 0; }
-  .note.two .g-plan.both .g-h { color: #E6D6B0; }
-  @media (max-width: 360px) { .g-plan.both { column-gap: 8px; font-size: 12.5px; } .g-plan.both .g-h { letter-spacing: 0.08em; } .g-plan.both .php { font-size: 11px; } }
   .fee-intl { text-align: center; font-size: 13.5px; color: #4A3728; max-width: 560px; margin: 30px auto 0; }
   /* The dashed box under the fee notes, and the small installment table in the tabs */
   .side-box { border: 1px dashed rgba(74,55,40,0.5); padding: 16px 20px 14px; margin: 26px auto 0; max-width: 620px; text-align: center; }
@@ -957,7 +943,7 @@
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
 </style>
-<script>(function(){var v="20261015112309";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261016071439";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -982,7 +968,7 @@
       <div class="h-stage">
         <div class="h-print"><img src="images/sketch-lake.jpg" alt="A pencil sketch of a lake with a small tower on an island"></div>
         <div class="h-note"><p class="h-note-title">[ Hanoi Drawing Cohort ]</p>
-          <dl><dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd><dt>Location</dt><dd>Hanoi, Vietnam</dd><dt>Cohort fee</dt><dd>US$1,525 for one week<br>US$2,375 for two weeks<small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱90,000 or ₱140,000</small></dd><dt>Apply by</dt><dd>Jan 31, 2027</dd></dl>
+          <dl><dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd><dt>Location</dt><dd>Hanoi, Vietnam</dd><dt>Cohort fee</dt><dd>US$1,525 for one week<br>US$2,375 for two weeks</dd><dt>Apply by</dt><dd>Jan 31, 2027</dd></dl>
         </div>
       </div>
     </div>
@@ -1116,7 +1102,7 @@
       <div class="glance note one" id="g-one">
         <p class="note-title">[ One week · Pencil ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd><b class="fee-usd">US$1,525</b><small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱90,000 Philippine pesos</small></dd>
+          <dt>Cohort fee</dt><dd><b class="fee-usd">US$1,525</b></dd>
           <dt>Cohort dates</dt><dd>Mar 4–11, 2027</dd>
           <dt>Application deadline</dt><dd>Jan 31, 2027</dd>
         </dl>
@@ -1144,18 +1130,17 @@
         </div>
         <div class="g-rule"></div>
         <p class="g-head">Installment plan</p>
-        <div class="g-plan both">
-          <span></span><span class="g-h"><svg class="flag" viewBox="0 0 19 10" role="img" aria-label="US dollars"><rect width="19" height="10" fill="#B22234"/><path d="M0 1.15h19M0 2.69h19M0 4.23h19M0 5.77h19M0 7.31h19M0 8.85h19" stroke="#fff" stroke-width="0.77"/><rect width="7.6" height="5.38" fill="#3C3B6E"/><path d="M1.3 1.2h.01M3.1 1.2h.01M4.9 1.2h.01M6.6 1.2h.01M2.2 2.7h.01M4 2.7h.01M5.8 2.7h.01M1.3 4.2h.01M3.1 4.2h.01M4.9 4.2h.01M6.6 4.2h.01" stroke="#fff" stroke-width="0.7" stroke-linecap="round"/></svg></span><span class="g-h"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine pesos"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg></span>
-          <span>Downpayment, within 3 days of being accepted</span><span>US$525</span><span class="php">₱30,000</span>
-          <span>By Feb 10, 2027</span><span>US$500</span><span class="php">₱30,000</span>
-          <span>By Feb 20, 2027</span><span>US$500</span><span class="php">₱30,000</span>
-          <span class="g-t">Total</span><span class="g-t">US$1,525</span><span class="g-t php">₱90,000</span>
+        <div class="g-plan two">
+          <span>Downpayment, within 3 days of being accepted</span><span>US$525</span>
+          <span>By Feb 10, 2027</span><span>US$500</span>
+          <span>By Feb 20, 2027</span><span>US$500</span>
+          <span class="g-t">Total</span><span class="g-t">US$1,525</span>
         </div>
       </div>
       <div class="glance note two" id="g-two">
         <p class="note-title">[ Two weeks · Pencil, Composition and Sketching ]</p>
         <dl class="g-rows">
-          <dt>Cohort fee</dt><dd><b class="fee-usd">US$2,375</b><small class="php"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine flag"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg> ₱140,000 Philippine pesos</small></dd>
+          <dt>Cohort fee</dt><dd><b class="fee-usd">US$2,375</b></dd>
           <dt>Cohort dates</dt><dd>Mar 4–18, 2027</dd>
           <dt>Application deadline</dt><dd>Jan 31, 2027</dd>
         </dl>
@@ -1183,23 +1168,22 @@
         </div>
         <div class="g-rule"></div>
         <p class="g-head">Installment plan</p>
-        <div class="g-plan both">
-          <span></span><span class="g-h"><svg class="flag" viewBox="0 0 19 10" role="img" aria-label="US dollars"><rect width="19" height="10" fill="#B22234"/><path d="M0 1.15h19M0 2.69h19M0 4.23h19M0 5.77h19M0 7.31h19M0 8.85h19" stroke="#fff" stroke-width="0.77"/><rect width="7.6" height="5.38" fill="#3C3B6E"/><path d="M1.3 1.2h.01M3.1 1.2h.01M4.9 1.2h.01M6.6 1.2h.01M2.2 2.7h.01M4 2.7h.01M5.8 2.7h.01M1.3 4.2h.01M3.1 4.2h.01M4.9 4.2h.01M6.6 4.2h.01" stroke="#fff" stroke-width="0.7" stroke-linecap="round"/></svg></span><span class="g-h"><svg class="flag" viewBox="0 0 6 3" role="img" aria-label="Philippine pesos"><rect width="6" height="1.5" fill="#0038A8"/><rect y="1.5" width="6" height="1.5" fill="#CE1126"/><path d="M0 0 2.6 1.5 0 3Z" fill="#fff"/><circle cx="0.87" cy="1.5" r="0.33" fill="#FCD116"/></svg></span>
-          <span>Downpayment, within 3 days of being accepted</span><span>US$825</span><span class="php">₱50,000</span>
-          <span>By Feb 10, 2027</span><span>US$775</span><span class="php">₱45,000</span>
-          <span>By Feb 20, 2027</span><span>US$775</span><span class="php">₱45,000</span>
-          <span class="g-t">Total</span><span class="g-t">US$2,375</span><span class="g-t php">₱140,000</span>
+        <div class="g-plan two">
+          <span>Downpayment, within 3 days of being accepted</span><span>US$825</span>
+          <span>By Feb 10, 2027</span><span>US$775</span>
+          <span>By Feb 20, 2027</span><span>US$775</span>
+          <span class="g-t">Total</span><span class="g-t">US$2,375</span>
         </div>
       </div>
       </div>
-      <p class="fee-intl">Fees are in US dollars. If you pay from the Philippines, you pay the Philippine peso amounts shown beside them. From anywhere else, you pay in US dollars by Wise.</p>
+      <p class="fee-intl">Fees are in US dollars, paid by Wise.</p>
       <div class="side-box">
         <p class="g-head">Sharing an apartment</p>
-        <p>If two of you apply together and both join the drawing classes, you can share one apartment, which has one double bed. The cohort fee for two people is US$2,800 (₱165,000) for one week or US$4,250 (₱250,000) for two. The details are under <a href="#payment" data-open-tab="ap-s">How to apply</a>.</p>
+        <p>If two of you apply together and both join the drawing classes, you can share one apartment, which has one double bed. The cohort fee for two people is US$2,800 for one week or US$4,250 for two. The details are under <a href="#payment" data-open-tab="ap-s">How to apply</a>.</p>
       </div>
       <div class="side-box">
         <p class="g-head">Studio access only</p>
-        <p>If you already draw or paint and don't need lessons, you can travel with the cohort without joining the drawing classes. You get studio access, with no lessons. The cohort fee is US$1,450 (₱85,000) for one week or US$2,300 (₱135,000) for two. The details are under <a href="#payment" data-open-tab="ap-a">How to apply</a>.</p>
+        <p>If you already draw or paint and don't need lessons, you can travel with the cohort without joining the drawing classes. You get studio access, with no lessons. The cohort fee is US$1,450 for one week or US$2,300 for two. The details are under <a href="#payment" data-open-tab="ap-a">How to apply</a>.</p>
       </div>
     </div>
   </section>
@@ -1248,7 +1232,7 @@
         </ul>
         <h3>Do I need a visa?</h3>
         <ul class="plain">
-          <li>It depends on your passport. Some passports can enter Vietnam without a visa for a set number of days. For example, Philippine passport holders can stay visa-free for up to 21 days, which covers the whole trip.</li>
+          <li>It depends on your passport. Some passports can enter Vietnam without a visa for a set number of days.</li>
           <li>Rules change and differ by country, so please check the current rule for your passport before you book anything. If you plan to arrive early or stay on, make sure your whole stay fits within what your passport allows.</li>
         </ul>
         <h3>What's the weather like?</h3>
@@ -1351,15 +1335,15 @@
         <h3>The fee</h3>
         <div class="g-plan sch art">
           <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
-          <span>Cohort fee</span><span><b>US$1,450</b><small>₱85,000</small></span><span><b>US$2,300</b><small>₱135,000</small></span>
+          <span>Cohort fee</span><span><b>US$1,450</b></span><span><b>US$2,300</b></span>
         </div>
         <h3>Installment plan</h3>
         <div class="g-plan sch art">
           <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
-          <span>Downpayment, within 3 days of being accepted</span><span>US$525<small>₱30,000</small></span><span>US$825<small>₱50,000</small></span>
-          <span>By Feb 10, 2027</span><span>US$500<small>₱30,000</small></span><span>US$775<small>₱45,000</small></span>
-          <span>By Feb 20, 2027</span><span>US$425<small>₱25,000</small></span><span>US$700<small>₱40,000</small></span>
-          <span class="g-t">Total</span><span class="g-t">US$1,450<small>₱85,000</small></span><span class="g-t">US$2,300<small>₱135,000</small></span>
+          <span>Downpayment, within 3 days of being accepted</span><span>US$525</span><span>US$825</span>
+          <span>By Feb 10, 2027</span><span>US$500</span><span>US$775</span>
+          <span>By Feb 20, 2027</span><span>US$425</span><span>US$700</span>
+          <span class="g-t">Total</span><span class="g-t">US$1,450</span><span class="g-t">US$2,300</span>
         </div>
         <h3>How to apply</h3>
         <ul class="plain">
@@ -1379,16 +1363,16 @@
         <h3>The fee, for two people</h3>
         <div class="g-plan sch art">
           <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
-          <span>Cohort fee</span><span><b>US$2,800</b><small>₱165,000</small></span><span><b>US$4,250</b><small>₱250,000</small></span>
+          <span>Cohort fee</span><span><b>US$2,800</b></span><span><b>US$4,250</b></span>
         </div>
         <p class="sa-note">It includes everything the cohort fee does, for each of you.</p>
         <h3>Installment plan, for two people</h3>
         <div class="g-plan sch art">
           <span></span><span class="g-h">One week</span><span class="g-h">Two weeks</span>
-          <span>Downpayment, within 3 days of being accepted</span><span>US$950<small>₱55,000</small></span><span>US$1,500<small>₱90,000</small></span>
-          <span>By Feb 10, 2027</span><span>US$925<small>₱55,000</small></span><span>US$1,375<small>₱80,000</small></span>
-          <span>By Feb 20, 2027</span><span>US$925<small>₱55,000</small></span><span>US$1,375<small>₱80,000</small></span>
-          <span class="g-t">Total</span><span class="g-t">US$2,800<small>₱165,000</small></span><span class="g-t">US$4,250<small>₱250,000</small></span>
+          <span>Downpayment, within 3 days of being accepted</span><span>US$950</span><span>US$1,500</span>
+          <span>By Feb 10, 2027</span><span>US$925</span><span>US$1,375</span>
+          <span>By Feb 20, 2027</span><span>US$925</span><span>US$1,375</span>
+          <span class="g-t">Total</span><span class="g-t">US$2,800</span><span class="g-t">US$4,250</span>
         </div>
         <h3>How to apply</h3>
         <ul class="plain">
