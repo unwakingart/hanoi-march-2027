@@ -813,7 +813,7 @@
   .app-msg { margin: 10px 0 0; font-size: 13.5px; color: #8A3B2A; min-height: 1em; }
   .app-done h3 { font-size: 18px; margin-bottom: 6px; }
   .app-done p { margin: 0; }
-  @media (min-width: 700px) { .glance.app { padding: 34px 40px 30px; } .app-row { grid-template-columns: 1fr 1fr; } .app-row .app-short { max-width: 140px; } .app-row.app-three { grid-template-columns: 1fr 1fr 1fr; } }
+  @media (min-width: 700px) { .glance.app { padding: 34px 40px 30px; } .app-row { grid-template-columns: 1fr 1fr; } .app-row .app-short { max-width: 140px; } .app-row.app-three { grid-template-columns: 1fr 1fr 1fr; } .app-row.app-name { grid-template-columns: 1.3fr 1fr 110px; } }
   .h-plus { font-size: 10px; line-height: 1; color: #4A3728; margin: 5px 0 0; }
   .hero2 h1 { margin-top: 5px; }
 
@@ -946,7 +946,7 @@
   @media (max-width: 600px) { .photo-row.labeled figcaption { font-size: 10.5px; padding: 16px 6px 5px; } }
   .photo-credit { font-size: 12px; color: #6B5744; margin: -10px 0 14px; }
 </style>
-<script>(function(){var v="20261016100937";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261016101311";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1426,11 +1426,11 @@
           <input type="hidden" name="from_name" value="Hanoi intensive application">
           <input type="checkbox" name="botcheck" class="app-hp" tabindex="-1" autocomplete="off">
 
-          <div class="app-row">
+          <div class="app-row app-name">
             <label>Name<input type="text" name="Name" required autocomplete="name"></label>
+            <label>What should I call you?<input type="text" name="Nickname" required placeholder="A nickname is fine"></label>
             <label class="app-short">Age<input type="number" name="Age" min="18" max="99" required inputmode="numeric"></label>
           </div>
-          <label>What would you like to be called? A nickname is fine.<input type="text" name="Nickname" required></label>
           <div class="app-row">
             <label>Email<input type="email" name="email" required autocomplete="email"></label>
             <label>Instagram handle<input type="text" name="Instagram" placeholder="@" required></label>
@@ -1449,11 +1449,11 @@
 
           <fieldset id="app-share" hidden>
             <legend>Who are you sharing with? Please fill in their details too. This one form covers both of you.</legend>
-            <div class="app-row">
+            <div class="app-row app-name">
               <label>Their name<input type="text" name="Second person: Name"></label>
+              <label>What should I call them?<input type="text" name="Second person: Nickname" placeholder="A nickname is fine"></label>
               <label class="app-short">Their age<input type="number" name="Second person: Age" min="18" max="99" inputmode="numeric"></label>
             </div>
-            <label>What would they like to be called?<input type="text" name="Second person: Nickname"></label>
             <div class="app-row">
               <label>Their email<input type="email" name="Second person: Email"></label>
               <label>Their Instagram handle<input type="text" name="Second person: Instagram" placeholder="@"></label>
