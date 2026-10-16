@@ -940,9 +940,13 @@
   .know .g-panel.fact ul + h3 { margin-top: 20px; }
   .app fieldset[hidden] { display: none; }
   h2.g-title { line-height: 1.6; }   /* section titles are real headings; keep the look they had as paragraphs */
+  .photo-row.labeled .ph { position: relative; margin: 0; }
+  .photo-row.labeled .ph img { display: block; width: 100%; }
+  .photo-row.labeled figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 22px 10px 8px; border-radius: 0 0 6px 6px; background: linear-gradient(transparent, rgba(30,22,14,0.62)); color: #FDF8F0; font-size: 13px; line-height: 1.25; letter-spacing: 0.02em; text-shadow: 0 1px 3px rgba(0,0,0,0.45); }
+  @media (max-width: 600px) { .photo-row.labeled figcaption { font-size: 10.5px; padding: 16px 6px 5px; } }
   .photo-credit { font-size: 12px; color: #6B5744; margin: -10px 0 14px; }
 </style>
-<script>(function(){var v="20261016100643";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
+<script>(function(){var v="20261016100759";function c(){fetch("version.txt?"+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(t){t=t.trim();if(/^\d+$/.test(t)&&t!==v&&location.search.indexOf("v="+t)<0){location.replace(location.pathname+"?v="+t+location.hash)}}).catch(function(){})}c();document.addEventListener("visibilitychange",function(){if(!document.hidden)c()});window.addEventListener("pageshow",function(e){if(e.persisted)c()})})();</script>
 </head>
 <body>
 
@@ -1202,7 +1206,7 @@
       </div>
       <div class="glance g-panel fact" id="k-1" role="tabpanel">
         <h3>We stay in Tây Hồ, by West Lake</h3>
-        <div class="photo-row r3"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-pagoda.jpg" alt="West Lake from above, with Trấn Quốc Pagoda on its island"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-dusk.jpg" alt="West Lake and the city lights at dusk"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-lotte-mall.jpg" alt="Inside Lotte Mall West Lake"></div>
+        <div class="photo-row r3 labeled"><figure class="ph"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-pagoda.jpg" alt="West Lake from above, with Trấn Quốc Pagoda on its island"><figcaption>Trấn Quốc Pagoda</figcaption></figure><figure class="ph"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-dusk.jpg" alt="West Lake and the city lights at dusk"><figcaption>West Lake at dusk</figcaption></figure><figure class="ph"><img loading="lazy" decoding="async" class="photo-img" style="aspect-ratio:4 / 3" src="images/tayho-lotte-mall.jpg" alt="Inside Lotte Mall West Lake"><figcaption>Inside Lotte Mall</figcaption></figure></div>
         <p class="photo-credit">Photos of West Lake: Nguyen Ngoc Tien and Linh Tran, on Pexels.</p>
         <ul class="plain">
           <li>Tây Hồ is the district around West Lake. It's a diverse area, with cafés and restaurants of many cuisines. Lotte Mall is nearby for groceries and anything you forgot to pack.</li>
